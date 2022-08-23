@@ -7,7 +7,7 @@ class myGame {
     this.questaoAtual = {};
     this.contadorQuestoes = 0;
     this.questoesDisponiveis = [];
-    this.maximoPerguntas = 10;
+    this.maximoPerguntas = 15;
     this.acertoQuestao = true;
     this.pontosAcerto = 0;
 
@@ -33,29 +33,16 @@ class myGame {
     ];
   }
 
-  Iniciandojogo(){startGame = () => {
+  Iniciandojogo(){
+    startGame = () => {
     this.contadorQuestoes = 0;
     this.score = 0;
     this.questoesDisponiveis = [...this.perguntas];
-    pegarNovasPerguntas();
+    this.trazendoNovaPergunta();
   };
   }
-
+ //traz a nova pergunta
   trazendoNovaPergunta() {
-    pegarNovasPerguntas = () => {
-      if (
-        this.questoesDisponiveis === 0 ||
-        this.contadorQuestoes > this.maximoPerguntas
-      ) {
-        localStorage.setItem("mostRecentScore", score);
-
-        return window.location.assign("/end.html");
-      }
-      contadorQuestoes++;
-      progressText.innerText = `questão ${this.contadorQuestoes} de ${this.maximoPerguntas}`;
-      progressBarFull.Style.width = `${
-        (this.contadorQuestoes / this.maximoPerguntas) * 100
-      }%`;
 
       const indexDaPergunta = Math.floor(
         math.random() * this.questoesDisponiveis.length
@@ -69,8 +56,8 @@ class myGame {
       });
       this.questoesDisponiveis.splice(indexDaPergunta, 1);
       this.acertoQuestao = true;
-    };
-  }
+
+}
 
   Verificandoacerto() {
     choices.forEach((choice) => {

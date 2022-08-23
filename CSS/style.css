@@ -10,6 +10,12 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#textoInicial {
+  font-size: 1rem;
+  color: #ea8838;
+  margin-bottom: 5rem;
+}
+
 h1 {
   font-size: 1.5rem;
   color: #ea8838;
@@ -81,3 +87,59 @@ h2 {
   box-shadown: none;
   transform: none;
 }
+
+.choice-container{
+  display:flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  background-color: teal ;
+  font-size: 3rem;
+  min-width: 80rem;
+  }
+  
+  .choice-container:hover{
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem chocolate;
+  transform: scale(1.03);
+  transform: transform 100ms;
+  }
+  
+  .choice-prefix{
+      padding: 2rem 2.5rem;
+      color: chocolate;
+  }
+  
+  .choice-text{
+      padding: 2rem;
+      width: 100%;
+  }
+  
+  .correct{
+      backgroud:linear-gradient(32deg,rgb(48, 239, 51) 0%,rgb(82, 243, 46)100%);
+  }
+  
+  .incorrect{
+      backgroud:linear-gradient(32deg,rgb(233, 73, 56) 0%,rgb(254, 5, 5)100%);
+  }
+  
+  
+  
+  @media screen and (max-width:768px){
+      .choice-container{
+          mid-width: 40px;
+      }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  footer{
+    margin-bottom: 2 rem;
+
+  }
