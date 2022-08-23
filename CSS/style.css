@@ -10,8 +10,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-
 h1 {
   font-size: 1.5rem;
   color: #ea8838;
@@ -56,31 +54,30 @@ h2 {
 }
 
 .btn {
-    font-size: 2.4rem;
-    padding: 2rem 0;
-    width: 8rem;
-    height: 5rem;
-    text-align: center;
-    margin-top: 1rem;
-    text-decoration: ;
-    color: rgb(253, 197, 176);
-    background: coral;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    alig
-  }
-  
-  .btn:hover {
-      cursor:pointer;
-      box-shadow: 0 0.4rem 1.4rem 0  #d98846;
-      transition: transform 150ms;
-      transform: scale(1.03);
-  }
-  
-  .btn[disabled]:hover{
+  font-size: 2.4rem;
+  padding: 2rem 0;
+  width: 8rem;
+  height: 5rem;
+  text-align: center;
+  margin-top: 1rem;
+
+  color: rgb(253, 197, 176);
+  background: coral;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #d98846;
+  transition: transform 150ms;
+  transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
   cursor: not-allowed;
   box-shadown: none;
   transform: none;
-  }
+}
