@@ -1,7 +1,3 @@
-:root {
-  background-color: rgb(253, 197, 176);
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,21 +6,51 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#textoInicial {
-  font-size: 1rem;
-  color: #ea8838;
+.textoInicial {
+  font-size: 2rem;
+  color: #ffffff;
   margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+u {
+  font-size: 2rem;
+  margin: none;
 }
 
-h1 {
+label {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+input {
+  width: 20rem;
   font-size: 1.5rem;
-  color: #ea8838;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
+  display: flex;
 }
 
-h2 {
-  font-size: 4.2rem;
-  margin-bottom: 4rem;
+#btnStart {
+  display: flex;
+  height: 20px;
+  width: 90px;
+  font-size: 2rem;
+  padding: 35px;
+  border-radius: 12px;
+  border-color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 4px black;
+  text-shadow: #ffffff;
+}
+
+#btnStart:hover {
+  cursor: pointer;
+  transition: transform 150ms;
+  transform: scale(1.1);
 }
 
 .container {
@@ -55,10 +81,6 @@ h2 {
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .btn {
   font-size: 2.4rem;
   padding: 2rem 0;
@@ -66,7 +88,7 @@ h2 {
   height: 5rem;
   text-align: center;
   margin-top: 1rem;
-
+  display: flex;
   color: rgb(253, 197, 176);
   background: coral;
   border-radius: 10px;
@@ -84,62 +106,209 @@ h2 {
 
 .btn[disabled]:hover {
   cursor: not-allowed;
-  box-shadown: none;
+  box-shadow: none;
   transform: none;
 }
 
-.choice-container{
-  display:flex;
+.choice-container {
+  display: flex;
   margin-bottom: 0.8rem;
   width: 100%;
   border-radius: 4px;
-  background-color: teal ;
+  background-color: chocolate;
   font-size: 3rem;
   min-width: 80rem;
-  }
-  
-  .choice-container:hover{
+}
+
+.choice-container:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem chocolate;
   transform: scale(1.03);
   transform: transform 100ms;
-  }
-  
-  .choice-prefix{
-      padding: 2rem 2.5rem;
-      color: chocolate;
-  }
-  
-  .choice-text{
-      padding: 2rem;
-      width: 100%;
-  }
-  
-  .correct{
-      backgroud:linear-gradient(32deg,rgb(48, 239, 51) 0%,rgb(82, 243, 46)100%);
-  }
-  
-  .incorrect{
-      backgroud:linear-gradient(32deg,rgb(233, 73, 56) 0%,rgb(254, 5, 5)100%);
-  }
-  
-  
-  
-  @media screen and (max-width:768px){
-      .choice-container{
-          mid-width: 40px;
-      }
-  }
+}
 
-  .hide {
-    display: none;
-  }
+.choice-prefix {
+  padding: 2rem 2.5rem;
+  color: white;
+}
 
-  .show {
-    display: flex;
-  }
+.choice-text {
+  padding: 2rem;
+  width: 100%;
+  color: white;
+}
 
-  footer{
-    margin-bottom: 2 rem;
+.correto {
+  /*  background-color:linear-gradient(32deg,rgb(48, 239, 51) 0%,rgb(82, 243, 46)100%); */
+  color: green;
+  margin: 1px green;
+}
 
+.incorreto {
+  /*       background-color:linear-gradient(32deg,rgb(233, 73, 56) 0%,rgb(254, 5, 5)100%);
+ */
+
+  color: red;
+  margin: 1px red;
+}
+
+@media screen and (max-width: 768px) {
+  .choice-container {
+    min-width: 40px;
   }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+footer {
+  margin-bottom: 2 rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+#game {
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+
+#proximaPergunta {
+  flex-direction: column;
+  align-items: center;
+  background-color: chocolate;
+  font-size: 2rem;
+  color: white;
+  min-width: 30rem;
+  margin-top: 3rem;
+  border-color: white;
+  border-radius: 10px;
+}
+
+#proximaPergunta:hover {
+  cursor: pointer;
+  transition: transform 150ms;
+  transform: scale(1.1);
+}
+
+#inicio {
+  color: white;
+  background-color: chocolate;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  border-radius: 18px;
+  padding: 40px;
+}
+
+#Question {
+  font-size: 3rem;
+  margin-bottom: 2%;
+}
+
+#fimDeJogo {
+  font-size: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 60%;
+  margin-top: 4%;
+  margin: 1px solid chocolate;
+  background-color: chocolate;
+  display: none;
+  align-items: center;
+  padding: 40px;
+  border-radius: 18px;
+
+}
+
+a {
+  font-size: 2rem;
+  color: white;
+}
+
+ul {
+  font-size: 2rem;
+  color: white;
+}
+
+#fimDeJogo h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 5rem;
+}
+
+#footer {
+  bottom: 0;
+  overflow: hidden;
+  position: fixed;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: grey;
+  color: white;
+}
+
+#voltarInicio {
+  margin-top: 3rem;
+  display: flex;
+  height: 40px;
+  width: 400px;
+  font-size: 2rem;
+  padding: 35px;
+  border-radius: 12px;
+  border-color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 4px black;
+  text-shadow: #ffffff;
+  margin-bottom: 3rem;
+}
+
+#voltarInicio:hover {
+  cursor: pointer;
+  transition: transform 150ms;
+  transform: scale(1.1);
+}
+
+#textoFim {
+  margin-bottom: 3rem;
+}
+
+#name {
+  font-size: 3rem;
+}
+
+#points {
+  font-size: 3rem;
+}
+
+#textoFim2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#textoFim {
+  margin-top: 2rem;
+}

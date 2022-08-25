@@ -10,49 +10,100 @@
   <body>
     <!--div relacionada ao inicio-->
     <div id="inicio" class="inicio">
+      <div>
+        <img src="./ASSETMENTS/TDAH QUIZ.gif" alt="" />
+      </div>
       <div id="home" class="flex-column flex-center">
-        <h1>BEM VINDO AO JOGO DE CURIOSIDADES SOBRE TDAH!</h1>
-        <p id="textoInicial">
-          Este jogo foi desenvolvido com o intuído de trazer mais informações e
-          curiosidades sobre esta condição
-        </p>
+        <div>
+          <p class="textoInicial">
+            Este jogo foi desenvolvido com o intuíto de trazer mais informações
+            e curiosidades sobre esta condição afeta certa de 2 milhões de
+            brasileiros.
+          </p>
+
+          <p class="textoInicial">
+            Separei 10 perguntas para testar seu conhecimento a respeito do
+            asunto, no final você obterá o número de tentativas que usou para
+            passar por todas elas.
+          </p>
+        </div>
         <label>Digite seu nome jogador</label>
-        <input type="text" />
+        <input id="homeInput" type="text" />
         <button id="btnStart">Jogar!</button>
       </div>
     </div>
+    <!--div relacionada ao inicio-->
 
     <!--div relacionada as perguntas e respostas-->
     <div id="game" class="hide">
       <div id="score">
         <h1 id="Question">Quais são as respostas desta pergunta?</h1>
         <div class="choice-container">
-          <p class="choice-prefix">A</p>
-          <p class="choice-text" data-number="1">Choice 1</p>
+          <p class="choice-prefix">(A)</p>
+          <p id="choice1" class="choice-text">Choice 1</p>
         </div>
         <div class="choice-container">
-          <p class="choice-prefix">B</p>
-          <p class="choice-text" data-number="2">Choice 2</p>
+          <p class="choice-prefix">(B)</p>
+          <p id="choice2" class="choice-text">Choice 2</p>
         </div>
         <div class="choice-container">
-          <p class="choice-prefix">C</p>
-          <p class="choice-text" data-number="3">Choice 3</p>
+          <p class="choice-prefix">(C)</p>
+          <p id="choice3" class="choice-text">Choice 3</p>
         </div>
-        <div class="choice-container">
-          <p class="choice-prefix">D</p>
-          <p class="choice-text" data-number="4">Choice 4</p>
+        <div id="container4" class="choice-container">
+          <p class="choice-prefix">(D)</p>
+          <p id="choice4" class="choice-text">Choice 4</p>
         </div>
-        <div class="choice-container">
-          <p class="choice-prefix">E</p>
-          <p class="choice-text" data-number="5">Choice 5</p>
+        <div id="container5" class="choice-container">
+          <p class="choice-prefix">(E)</p>
+          <p id="choice5" class="choice-text">Choice 5</p>
         </div>
       </div>
+      <button id="proximaPergunta" class="hide">Proxima Pergunta ></button>
     </div>
-    <!--div relacionada as perguntas e respostas-->
 
-    <footer>
-      Desenvolvido por Pedro Maciel em seu primeiro projeto da turma 85 WD FT
-      AGO 22
+    <!--div relacionada ao fim de jogo-->
+    <div id="fimDeJogo" class="hide">
+      <div id="textofinal">
+        <h1 class="textoFim">
+          Parabéns <span id="name" class="spamfim"></span>!!! você precisou de
+          <span id="points"></span> tentativas para passar por todas as 10
+          perguntas.
+        </h1>
+      </div>
+      <div id="textoFim2">
+        <h1>
+          Muito obrigado por ter participado deste jogo e ter aprendido mais
+          sobre o tema, deixei 4 links abaixo para caso queira sabe mais sobre o
+          assunto.
+        </h1>
+      </div>
+      <li>
+      <ul>
+        Depoimentos de pessoas com TDAH:
+        <a href="url">https://tdah.org.br/category/depoimentos-2/</a>
+      </ul>
+      <ul>
+        Dicas para os pais:
+        <a href="url">https://tdah.org.br/dicas-para-pais/</a>
+      </ul>
+      <ul>
+        Teste para adultos:
+        <a href="" url>https://educamais.com/teste-de-tdah/</a>
+      </ul>
+      <ul>
+        Teste para crianças:
+        <a href="" url>https://www.tuasaude.com/teste/tdah-hiperatividade/</a>
+      </ul>
+    </li>
+      <button id="voltarInicio">voltar ao inicio para jogar novamente</button>
+    </div>
+
+    <!--div relacionada ao fim de jogo-->
+
+    <footer id="footer">
+      Desenvolvido por Pedro Maciel em seu primeiro projeto da turma 85 do curso
+      de WD FT AGO 2022
     </footer>
     <script src="./JS/game.js"></script>
     <script src="./JS/index.js"></script>
